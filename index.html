@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2051-7</title>
+  
+  
+  
+  
+<style>
+body{
+  background-color: lightgray;
+}
+.correct{
+  background-color: green;
+}
+.incorrect{
+  background-color: red;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <html>
+<body>
+<h2>Quiz<h2>
+<h3>
+<ol>
+  <li>What is the capitol of the US?<input data-correct="washington d.c."></li>
+  <li>What state is SAAS in?<input data-correct="washington"></li>
+  <li>17-3<input data-correct="14"></li>
+  <li>12/4<input data-correct="3"></li>
+  <li>Square root of 64?<input data-correct="8"></li>
+  <li>Whats my favorite color?<input data-correct="teal"></li>
+  <li>Whats the best food?<input data-correct="pizza"></li>
+  <li>Whats the coolest vehicle?<input data-correct="skateboard"></li>
+  <li>Whats the coolest water vehicle<input data-correct="jetski"></li>
+  <li>Whats the coolest mythical creature<input data-correct="dragon"></li>
+</h3>
+</body>
+</html>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+$("input").change(onChange);
+function onChange(evt){
+  console.log(evt);
+  let correct=$(this).data("correct");
+  let response=$(this).val();
+  if (correct==='string'){
+    correct=correct.toLowerCase();
+ }
+  response=response.toLowerCase();
+  
+  if (correct==response){
+    $(this).addClass("correct");
+    $(this).removeClass("incorrect");
+  }
+  else{
+    $(this).addClass("incorrect");
+    $(this).removeClass("correct");
+  }
+  console.log(correct);
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
